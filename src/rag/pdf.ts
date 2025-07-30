@@ -22,6 +22,7 @@ async function main() {
     // create the loader
     const loader = new PDFLoader('resume.pdf', {splitPages: false})
     const docs = await loader.load()
+    console.log(docs)
 
     // split the docs:
     const splitter = new RecursiveCharacterTextSplitter({
